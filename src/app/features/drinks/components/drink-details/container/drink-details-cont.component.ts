@@ -41,7 +41,7 @@ export class DrinkDetailsContComponent implements OnInit, OnDestroy {
   /** Subscription for managing data streams. */
   subscription: Subscription = new Subscription();
 
-  /** Configuration data for the UI elements, likely containing properties related to drink details presentation. */
+  /** Configuration data for the UI elements */
   uiConfig!: Ui;
 
   constructor(appConfig: AppConfigService) {
@@ -49,7 +49,7 @@ export class DrinkDetailsContComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    const id = this.activatedRoute.snapshot.params['id']; // Use a more descriptive variable name
+    const id = this.activatedRoute.snapshot.params['id'];
     this.store.dispatch(loadDrinkDetail({ id }));
 
     this.prepareData();
@@ -95,6 +95,7 @@ export class DrinkDetailsContComponent implements OnInit, OnDestroy {
       name: 'EN',
       value: drinkDetail.strInstructions,
     }); // default language
+
     for (const language of languages) {
       const instruction = drinkDetail[`strInstructions${language}` as keyof DrinkEntity];
       if (instruction) {

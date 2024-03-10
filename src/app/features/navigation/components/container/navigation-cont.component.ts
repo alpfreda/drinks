@@ -16,7 +16,7 @@ export class NavigationContComponent {
   /** Flag to indicate whether the navigation bar should be sticky. */
   isSticky = false;
 
-  /** Configuration data for the UI elements, likely containing properties related to the navigation bar. */
+  /** Configuration data for the UI elements. */
   uiConfig: Ui;
 
   constructor(appConfig: AppConfigService) {

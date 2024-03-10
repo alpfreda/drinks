@@ -32,7 +32,7 @@ export class DrinkListContComponent implements OnInit, OnDestroy {
   /** Observable that emits the current search type for drinks. */
   typeSearch$ = this.store.select(selectTypeSearch);
 
-  /** Configuration data for the UI elements, likely containing properties related to drink list presentation. */
+  /** Configuration data for the UI elements. */
   uiConfig!: Ui;
 
   /** Subscription for managing data streams. */

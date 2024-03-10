@@ -1,6 +1,3 @@
-/**
- * Interface for the 'Drink' data
- */
 export interface DrinkEntity {
   idDrink: string;
   strDrink: string;
