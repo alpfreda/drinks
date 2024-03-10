@@ -1,11 +1,3 @@
-## Start the application
-
-Run `npx nx serve drink` to start the development server. Happy coding!
-
-## Build for production
-
-Run `npx nx build drink` to build the application. The build artifacts are stored in the output directory (e.g. `dist/` or `build/`), ready to be deployed.
-
 # Drinks App
 
 ## Introduction
@@ -23,7 +15,8 @@ Drinks App is a simple application for browsing and discovering various drinks. 
 
 1. Clone this repository to your local machine.
 2. Navigate to the project directory.
-3. Run `npm install` to install dependencies.
+3. Run `yarn` to install dependencies.
+3. Run `yarn start` to start the app.
 
 ### Configuration
 
