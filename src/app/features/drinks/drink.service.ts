@@ -10,7 +10,7 @@ export class DrinkService {
   /** Configuration object for the drink API endpoints. */
   private apiConfig: Api;
 
-  constructor(private http: HttpClient, private appConfig: AppConfigService) {
+  constructor(private http: HttpClient, appConfig: AppConfigService) {
     /**
      * Initialize the API configuration from the app config service.
      */

@@ -6,12 +6,13 @@
   button {
     background: #fff;
     outline: none;
-    padding: 0.25rem 1rem;
+    padding: .5rem 1rem;
     border: 2px solid #ddd;
     border-radius: 0.25rem;
-    margin: 0 0.25rem;
+    margin: 0 .25rem 2rem;
     cursor: pointer;
-    margin-bottom: 2rem;;
+    cursor: pointer;
+    font-size: 1.15rem;
     &.active {
       border-color: green;
     }
