@@ -1,0 +1,26 @@
+@import '@assets/_mixins.scss';
+
+.primary-header {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 1.15rem;
+
+  .primary-header-inner {
+    @include flexbox($alignItems: center);
+    padding: 1rem;
+
+    dk-navbar-pres {
+      margin-inline-start: auto;
+    }
+  }
+
+  &.sticky {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.15);
+  }
+}

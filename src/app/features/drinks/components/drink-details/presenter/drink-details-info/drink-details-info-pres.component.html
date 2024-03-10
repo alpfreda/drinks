@@ -1,0 +1,19 @@
+<section class="detail-info">
+  <div class="detail-info-blur" [ngStyle]="{'background-image': 'url(' + drinkDetail.strDrinkThumb + ')'}">
+  </div>
+  <div class="container">
+    <div class="detail-info-inner">
+      <figure>
+        <img [src]="drinkDetail.strDrinkThumb" />
+      </figure>
+      <div class="detail-info-summary">
+        <h2 class="detail-info-name">{{drinkDetail.strDrink}}</h2>
+        <p>{{drinkDetail.strInstructions}}</p>
+        <div class="detail-info-category">
+          <img src="https://cdn-icons-png.freepik.com/512/882/882673.png" width="30" />
+          {{drinkDetail.strCategory}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

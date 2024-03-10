@@ -1,0 +1,6 @@
+<section class="types">
+  <button type="button" *ngFor="let innerType of types" [class.active]="innerType.value === type"
+    (click)="onChangeType(innerType.value)">
+    {{innerType.name}}
+  </button>
+</section>

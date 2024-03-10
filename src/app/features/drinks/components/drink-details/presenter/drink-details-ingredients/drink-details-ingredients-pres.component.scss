@@ -1,0 +1,25 @@
+@import '@assets/_mixins.scss';
+
+.ingredients-items {
+  @include flexbox($wrap: wrap);
+  gap: 1rem;
+  .ingredients-item {
+    padding: 1rem;
+    width: calc(20% - 1rem);
+    @include for-mobile-portrait-down() {
+      width: calc(50% - 1rem);
+    }
+    text-align: center;
+    background: #fff;
+    border-radius: 0.25rem;
+    .ingredients-item-name {
+      font-weight: bold;
+      margin-block: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .ingredients-item-description {
+      color: #666;
+      font-size: 1rem;
+    }
+  }
+}

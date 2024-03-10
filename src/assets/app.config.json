@@ -1,0 +1,34 @@
+{
+  "ui": {
+    "name": "Drinks",
+    "logo": "https://cdn-icons-png.freepik.com/512/11337/11337703.png",
+    "navigationLinks": [
+      { "name": "Drinks", "url": "drinks" },
+      { "name": "Contact", "url": "contact" },
+      { "name": "About", "url": "about" }
+    ],
+    "intro": {
+      "enable": true,
+      "title": "Alcoholic beverage",
+      "image": "https://cdn-icons-png.freepik.com/512/2405/2405492.png",
+      "Description": "An alcoholic beverage is a drink that contains ethanol, a type of alcohol and is produced by fermentation of grains, fruits, or other sources of sugar. The consumption of alcoholic drinks, often referred to as \"drinking\", plays an important social role in many cultures."
+    },
+    "types": [
+      { "name": "Alcoholic", "value": "Alcoholic" },
+      { "name": "Non Alcoholic", "value": "Non_Alcoholic" }
+    ],
+    "defaultType": "Alcoholic",
+    "drinksPerDesktopRow": 3,
+    "drinksPerMobileRow": 2,
+    "detailShowIngredients": true,
+    "detailShowServedIn": true,
+    "detailShowInstructions": true
+  },
+  "api": {
+    "baseUrl": "https://www.thecocktaildb.com/api/json/v1/1/",
+    "endpoints": {
+      "list": "filter.php?a=",
+      "details": "lookup.php?i="
+    }
+  }
+}

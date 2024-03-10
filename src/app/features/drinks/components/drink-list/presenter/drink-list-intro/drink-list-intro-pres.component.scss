@@ -1,0 +1,63 @@
+@import '@assets/_mixins.scss';
+
+$introMarginBlock: 10rem 5rem;
+$introMarginBlockMobile: 6rem 1rem;
+$introInfoWidth: 70%;
+$introHeaderFontSize: 3rem;
+$introHeaderFontSizeMobile: 2rem;
+$introDescriptionFontSize: 1.25rem;
+$introDescriptionColor: #555;
+$introImageMaxWidth: 10rem;
+
+.intro-section {
+  @include flexbox();
+  padding: 1rem;
+  align-items: center;
+  margin-block: $introMarginBlock;
+
+  @include for-mobile-portrait-down {
+    flex-direction: column;
+    margin-block: $introMarginBlockMobile;
+  }
+
+  .intro-info {
+    width: $introInfoWidth;
+    @include for-mobile-portrait-down {
+      text-align: center;
+    }
+    .intro-info-name {
+      font-size: $introHeaderFontSize;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      @include for-mobile-portrait-down {
+        font-size: $introHeaderFontSizeMobile;
+      }
+    }
+
+    p {
+      font-size: $introDescriptionFontSize;
+      color: $introDescriptionColor;
+      line-height: 1.5;
+    }
+
+    @include for-mobile-portrait-down {
+      width: 100%;
+      order: 2;
+    }
+  }
+
+  .intro-image {
+    text-align: center;
+    width: calc(100% - $introInfoWidth);
+
+    figure img {
+      max-width: $introImageMaxWidth;
+    }
+
+    @include for-mobile-portrait-down {
+      width: 100%;
+      order: 1;
+      margin-bottom: 2rem;
+    }
+  }
+}

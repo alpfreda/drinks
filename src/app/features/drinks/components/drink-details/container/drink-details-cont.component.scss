@@ -1,0 +1,39 @@
+@import '@assets/_mixins.scss';
+$ingredientsTitleIconSize: 2rem;
+$detailTitleMarginBlock: 2rem 1rem;
+$detailTitleFontSize: 1.5rem;
+$detailTitleInlineStart: 3rem;
+
+.detail-content {
+  padding: 1rem;
+  margin-bottom: 5rem;
+
+  .detail-title {
+    @include flexbox();
+    margin-block: $detailTitleMarginBlock;
+    font-size: $detailTitleFontSize;
+    min-height: $ingredientsTitleIconSize;
+    padding-inline-start: $detailTitleInlineStart;
+    position: relative;
+    font-weight: bold;
+    align-items: center;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: $ingredientsTitleIconSize;
+      width: $ingredientsTitleIconSize;
+      background: url(https://cdn-icons-png.freepik.com/512/12757/12757169.png) center center / $ingredientsTitleIconSize no-repeat;
+    }
+
+    &.serve:before {
+      background-image: url(https://cdn-icons-png.freepik.com/512/1898/1898701.png?ga=GA1.1.842947783.1709972893&);
+    }
+
+    &.intro:before {
+      background-image: url(https://cdn-icons-png.freepik.com/512/11389/11389759.png);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<dk-loading *ngIf="drinksIsLoading$ | async" />
+
+<section class="container">
+  <dk-drink-list-intro-pres *ngIf="uiConfig.intro.enable" [intro]="uiConfig.intro"></dk-drink-list-intro-pres>
+
+  <dk-drink-list-type-pres *ngIf="typeSearch$ | async as typeSearch" (changeType)="changeType($event)"
+    [type]="typeSearch" [types]="uiConfig.types"></dk-drink-list-type-pres>
+
+  <div class="drinks columns-{{uiConfig.drinksPerDesktopRow}} m-columns-{{uiConfig.drinksPerMobileRow}}"
+    *ngIf="drinks$ | async as drinks">
+
+    <dk-drink-list-item-pres *ngFor="let drink of drinks" [drink]="drink">
+    </dk-drink-list-item-pres>
+
+  </div>
+
+</section>

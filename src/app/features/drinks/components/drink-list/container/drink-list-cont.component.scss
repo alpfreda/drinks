@@ -1,0 +1,35 @@
+@import '@assets/_mixins.scss';
+
+.drinks {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+
+  &.columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &.columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &.columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include for-mobile-portrait-down(){
+    &.m-columns-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.m-columns-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.m-columns-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+

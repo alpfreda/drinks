@@ -1,0 +1,11 @@
+@import '@assets/_mixins.scss';
+
+.logo {
+  @include flexbox($alignItems: center);
+  font-size: 1.25rem;
+
+  h1 {
+    margin-inline-start: .5rem;
+    font-weight: bold;
+  }
+}

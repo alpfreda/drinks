@@ -1,0 +1,9 @@
+@import '@assets/_mixins.scss';
+
+.navbar ul {
+  @include flexbox();
+  gap: 1rem;
+  a {
+    cursor: pointer;
+  }
+}

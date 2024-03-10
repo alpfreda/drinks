@@ -1,0 +1,61 @@
+@import '@assets/_mixins.scss';
+
+.detail-info {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+
+  .detail-info-blur {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 105%;
+    height: 105%;
+    max-height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-filter: blur(100px);
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.3;
+  }
+
+  .detail-info-inner {
+    @include flexbox();
+
+    @include for-mobile-portrait-down() {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    figure img {
+      width: 150rem;
+      max-width: 15rem;
+      border-radius: 0.25rem;
+    }
+
+    .detail-info-summary {
+      margin-inline-start: 1rem;
+      font-size: 1.25rem;
+      padding: 1rem;
+      line-height: 1.5;
+
+      .detail-info-name {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-block-end: 0.5rem;
+        @include gradient-text(#3f51b5, #2196f3, #00bcd4);
+      }
+
+      .detail-info-category {
+        @include flexbox($alignItems: center);
+        display: inline-flex;
+        gap: 0.25rem;
+        margin: 1rem 0;
+        font-size: 1rem;
+      }
+    }
+  }
+}

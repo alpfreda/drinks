@@ -1,0 +1,7 @@
+<section class="ingredients-items">
+  <div class="ingredients-item" *ngFor="let ingredient of ingredients">
+    <img [src]="ingredient.url" [alt]="ingredient.name"/>
+    <h3 class="ingredients-item-name">{{ingredient.name}}</h3>
+    <span class="ingredients-item-description">{{ingredient.measure}}</span>
+  </div>
+</section>

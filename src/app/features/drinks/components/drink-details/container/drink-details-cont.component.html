@@ -1,0 +1,27 @@
+<dk-loading *ngIf="drinksIsLoading$ | async" />
+<section *ngIf="drinkDetail$ | async as drinkDetail">
+  <dk-drink-details-info-pres [drinkDetail]="drinkDetail"></dk-drink-details-info-pres>
+
+  <div class="container">
+    <div class="detail-content">
+
+      <ng-container *ngIf="uiConfig.detailShowIngredients">
+        <h3 class="detail-title">Ingredients</h3>
+        <dk-drink-details-ingredients-pres [ingredients]="ingredients"></dk-drink-details-ingredients-pres>
+      </ng-container>
+      
+
+      <ng-container *ngIf="uiConfig.detailShowServedIn">
+        <h3 class="detail-title">Served in</h3>
+        <div>{{drinkDetail.strGlass}}</div>
+      </ng-container>
+      
+
+      <ng-container *ngIf="uiConfig.detailShowInstructions">
+        <h3 class="detail-title">Instructions</h3>
+        <dk-drink-details-instructions-pres [instructions]="instructions"></dk-drink-details-instructions-pres>
+      </ng-container>
+
+    </div>
+  </div>
+</section>

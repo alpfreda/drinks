@@ -1,0 +1,9 @@
+<section class="languages">
+  <button type="button" *ngFor="let instruction of instructions"
+    [class.active]="currentInstruction?.name ===instruction.name" (click)="changeInstruction(instruction)">
+    {{instruction.name}}
+  </button>
+</section>
+<section *ngIf="currentInstruction">
+  {{currentInstruction.value}}
+</section>
